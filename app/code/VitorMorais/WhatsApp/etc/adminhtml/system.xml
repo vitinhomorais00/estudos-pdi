@@ -20,7 +20,7 @@
                          <label>Enable</label>
                          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
-                    <field id="whatsapp_number" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                    <field id="number" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>WhatsApp Number</label>
                          <comment>Example: 5511999999999</comment>
                          <depends>

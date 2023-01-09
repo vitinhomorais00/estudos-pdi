@@ -11,7 +11,7 @@
         <vitormorais_whatsapp>
             <vitormorais_general>
                 <enabled>0</enabled>
-                <whatsapp_number>5511999999999</whatsapp_number>
+                <number>5511999999999</number>
                 <position>left</position>
                 <icon_background_color>#2CB742</icon_background_color>
                 <icon_color>#FFFFFF</icon_color>
