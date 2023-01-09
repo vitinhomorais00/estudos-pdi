@@ -27,7 +27,7 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="whatsapp_position" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                    <field id="position" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
                          <label>Position</label>
                          <source_model>VitorMorais\WhatsApp\Model\Config\Source\Position</source_model>
                          <comment>Choose in which position the WhatsApp icon will appear on the website</comment>
@@ -35,14 +35,21 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="icon_background_color" translate="label comment" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+
+                    <field id="enabled" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                         <label>Enable</label>
+                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+
+
+                    <field id="icon_background_color" translate="label comment" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>Icon background color</label>
                          <comment>Fill WhatsApp background icon color in hexadecimal. Example: #FFFFFF</comment>
                          <depends>
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="icon_color" translate="label comment" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                    <field id="icon_color" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>Icon color</label>
                          <comment>Fill WhatsApp icon color in hexadecimal. Example: #2CB742</comment>
                          <depends>

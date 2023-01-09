@@ -38,7 +38,7 @@ class ConfigViewModel implements ArgumentInterface
 
      public function getWhatsappPosition() 
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/whatsapp_position', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/position', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
      }
 
      public function getIconColor() 
