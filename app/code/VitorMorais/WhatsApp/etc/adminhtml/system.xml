@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * Copyright © Vitor Morais, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+     <system>
+          <tab id="vitormorais" translate="label" sortOrder="1000">
+               <label>Studies - Vitor Morais</label>
+          </tab>
+          <section id="vitormorais_whatsapp" showInDefault="1" showInWebsite="1" showInStore="1" sortOrder="10" translate="label">
+               <label>WhatsApp</label>
+               <tab>vitormorais</tab>
+               <resource>Vitormorais_Whatsapp::config</resource>
+               <group id="vitormorais_general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>General</label>
+                    <field id="enabled" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                         <label>Enable</label>
+                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    </field>
+                    <field id="whatsapp_number" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                         <label>WhatsApp Number</label>
+                         <comment>Example: 5511999999999</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
+                    </field>
+                    <field id="whatsapp_position" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                         <label>Position</label>
+                         <source_model>VitorMorais\WhatsApp\Model\Config\Source\Position</source_model>
+                         <comment>Choose in which position the WhatsApp icon will appear on the website</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
+                    </field>
+                    <field id="icon_background_color" translate="label comment" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                         <label>Icon background color</label>
+                         <comment>Fill WhatsApp background icon color in hexadecimal. Example: #FFFFFF</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
+                    </field>
+                    <field id="icon_color" translate="label comment" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                         <label>Icon color</label>
+                         <comment>Fill WhatsApp icon color in hexadecimal. Example: #2CB742</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
+                    </field>
+               </group>
+          </section>
+     </system>
+</config>

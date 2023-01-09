@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Vitor Morais, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <vitormorais_whatsapp>
+            <vitormorais_general>
+                <enabled>0</enabled>
+                <whatsapp_number>5511999999999</whatsapp_number>
+                <whatsapp_position>left</whatsapp_position>
+                <icon_background_color>#2CB742</icon_background_color>
+                <icon_color>#FFFFFF</icon_color>
+            </vitormorais_general>
+        </vitormorais_whatsapp>
+    </default>
+</config>
