@@ -16,6 +16,7 @@
                 <open_new_tab>1</open_new_tab>
                 <icon_background_color>#2CB742</icon_background_color>
                 <icon_color>#FFFFFF</icon_color>
+                <width>50px</width>
             </vitormorais_general>
         </vitormorais_whatsapp>
     </default>

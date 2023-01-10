@@ -57,6 +57,13 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
+                    <field id="width" translate="label comment" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                         <label>Icon size</label>
+                         <comment>Fill in the icon size you want. Example: 50px</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
+                    </field>
                </group>
           </section>
      </system>

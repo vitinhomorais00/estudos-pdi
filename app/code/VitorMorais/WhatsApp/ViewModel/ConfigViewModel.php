@@ -55,4 +55,9 @@ class ConfigViewModel implements ArgumentInterface
      {
           return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/icon_background_color', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
      }
+
+     public function getWidth() 
+     {
+          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/width', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+     }
 }
