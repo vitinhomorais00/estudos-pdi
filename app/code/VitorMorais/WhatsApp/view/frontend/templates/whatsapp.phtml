@@ -9,11 +9,17 @@
     $viewModel = $block->getData('viewModel');
     $iconBackgroundColor = $viewModel->getIconBackgroundColor();
     $iconColor = $viewModel->getIconColor();
+    $openNewTab = $viewModel->getOpenNewTab();
 ?>
 
 <?php if (!empty($viewModel->getWhatsappNumber())): ?>
      <div class="whatsapp-fixed <?= $viewModel->getWhatsappPosition() ?>">
-          <a href="https://api.whatsapp.com/send?phone=<?= $viewModel->getWhatsappNumber() ?>" rel="noopener" aria-label="WhatsApp">
+          <a 
+               href="https://api.whatsapp.com/send?phone=<?= $viewModel->getWhatsappNumber() ?>" 
+               rel="noopener" 
+               aria-label="WhatsApp" 
+               target="<?= $openNewTab ? '_blank' : '_self';?>"
+          >
                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="whatsapp" x="0px" y="0px" viewBox="0 0 58 58" width="50px" xml:space="preserve">
                     <g>
                          <path style="fill:<?= $iconBackgroundColor ?>;" d="M0,58l4.988-14.963C2.457,38.78,1,33.812,1,28.5C1,12.76,13.76,0,29.5,0S58,12.76,58,28.5   S45.24,57,29.5,57c-4.789,0-9.299-1.187-13.26-3.273L0,58z"></path>

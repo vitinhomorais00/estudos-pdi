@@ -13,6 +13,7 @@
                 <enabled>0</enabled>
                 <number>5511999999999</number>
                 <position>left</position>
+                <open_new_tab>1</open_new_tab>
                 <icon_background_color>#2CB742</icon_background_color>
                 <icon_color>#FFFFFF</icon_color>
             </vitormorais_general>

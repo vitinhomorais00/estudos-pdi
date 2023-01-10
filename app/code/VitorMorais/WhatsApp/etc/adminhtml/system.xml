@@ -35,13 +35,11 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-
-                    <field id="enabled" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
-                         <label>Enable</label>
+                    <field id="open_new_tab" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                         <label>Open in new tab?</label>
                          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                         <comment>If you want to click on the icon to open the link in a new tab, set this option to YES.</comment>
                     </field>
-
-
                     <field id="icon_background_color" translate="label comment" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>Icon background color</label>
                          <comment>Fill WhatsApp background icon color in hexadecimal. Example: #FFFFFF</comment>

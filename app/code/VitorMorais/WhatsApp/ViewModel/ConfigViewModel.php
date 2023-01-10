@@ -41,6 +41,11 @@ class ConfigViewModel implements ArgumentInterface
           return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/position', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
      }
 
+     public function getOpenNewTab() 
+     {
+          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/open_new_tab', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+     }
+
      public function getIconColor() 
      {
           return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/icon_color', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
