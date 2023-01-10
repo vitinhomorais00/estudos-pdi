@@ -39,6 +39,9 @@
                          <label>Open in new tab?</label>
                          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                          <comment>If you want to click on the icon to open the link in a new tab, set this option to YES.</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
                     </field>
                     <field id="icon_background_color" translate="label comment" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>Icon background color</label>
