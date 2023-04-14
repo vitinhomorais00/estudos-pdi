@@ -28,17 +28,26 @@ class ConfigViewModel implements ArgumentInterface
 
      public function isEnabled()
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/enabled', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/enabled',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
      }
 
      public function getWhatsappNumber()
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/number', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/number',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
      }
 
      public function getWhatsappMessage()
      {
-          $messageFull = $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/message', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          $messageFull = $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/message',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+               );
           if (empty($messageFull)) {
                return '';
           }
@@ -51,26 +60,41 @@ class ConfigViewModel implements ArgumentInterface
 
      public function getWhatsappPosition()
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/position', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/position',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
      }
 
      public function getOpenNewTab()
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/open_new_tab', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/open_new_tab',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
      }
 
      public function getIconColor()
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/icon_color', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/icon_color',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
      }
 
      public function getIconBackgroundColor()
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/icon_background_color', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/icon_background_color',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
      }
 
      public function getWidth()
      {
-          return $this->scopeConfig->getValue('vitormorais_whatsapp/vitormorais_general/width', \Magento\Store\Model\ScopeInterface::SCOPE_STORE);
+          return $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/width',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
      }
 }
