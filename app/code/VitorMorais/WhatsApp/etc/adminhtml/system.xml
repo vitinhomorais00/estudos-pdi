@@ -27,7 +27,14 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="position" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                    <field id="message" translate="label comment" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                         <label>WhatsApp Message</label>
+                         <comment>This message will be sent automatically to the destination number. Example: Hello, I'm interested in your product!</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
+                    </field>
+                    <field id="position" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
                          <label>Position</label>
                          <source_model>VitorMorais\WhatsApp\Model\Config\Source\Position</source_model>
                          <comment>Choose in which position the WhatsApp icon will appear on the website</comment>
@@ -35,7 +42,7 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="open_new_tab" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
+                    <field id="open_new_tab" translate="label" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
                          <label>Open in new tab?</label>
                          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                          <comment>If you want to click on the icon to open the link in a new tab, set this option to YES.</comment>
@@ -43,21 +50,21 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="icon_background_color" translate="label comment" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                    <field id="icon_background_color" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>Icon background color</label>
                          <comment>Fill WhatsApp background icon color in hexadecimal. Example: #FFFFFF</comment>
                          <depends>
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="icon_color" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                    <field id="icon_color" translate="label comment" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>Icon color</label>
                          <comment>Fill WhatsApp icon color in hexadecimal. Example: #2CB742</comment>
                          <depends>
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="width" translate="label comment" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                    <field id="width" translate="label comment" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
                          <label>Icon size</label>
                          <comment>Fill in the icon size you want. Example: 50px</comment>
                          <depends>
