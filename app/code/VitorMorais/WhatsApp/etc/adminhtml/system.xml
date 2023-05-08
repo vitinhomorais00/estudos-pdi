@@ -50,27 +50,6 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
-                    <field id="icon_background_color" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
-                         <label>Icon background color</label>
-                         <comment>Fill WhatsApp background icon color in hexadecimal. Example: #FFFFFF</comment>
-                         <depends>
-                              <field id="enabled">1</field>
-                         </depends>
-                    </field>
-                    <field id="icon_color" translate="label comment" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
-                         <label>Icon color</label>
-                         <comment>Fill WhatsApp icon color in hexadecimal. Example: #2CB742</comment>
-                         <depends>
-                              <field id="enabled">1</field>
-                         </depends>
-                    </field>
-                    <field id="width" translate="label comment" sortOrder="80" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
-                         <label>Icon size</label>
-                         <comment>Fill in the icon size you want. Example: 50px</comment>
-                         <depends>
-                              <field id="enabled">1</field>
-                         </depends>
-                    </field>
                </group>
           </section>
      </system>
