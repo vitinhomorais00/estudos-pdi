@@ -50,6 +50,12 @@
                               <field id="enabled">1</field>
                          </depends>
                     </field>
+                    <field id="url" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
+                         <label>WhatsApp URL API</label>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
+                    </field>
                </group>
           </section>
      </system>

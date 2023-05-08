@@ -7,23 +7,23 @@
 
 <?php
     $viewModel = $block->getData('viewModel');
-    $iconBackgroundColor = $viewModel->getIconBackgroundColor();
-    $iconColor = $viewModel->getIconColor();
     $openNewTab = $viewModel->getOpenNewTab();
     $whatsappNumber = $viewModel->getWhatsAppNumber();
     $whatsappMessage = $viewModel->getWhatsappMessage();
-    $urlWhatsapp = 'https://api.whatsapp.com/send?phone=';
+    $urlWhatsapp = $viewModel->getWhatsappUrlApi();
 ?>
 
 <?php if (!empty($whatsappNumber)): ?>
      <div class="whatsapp-fixed <?= $viewModel->getWhatsappPosition() ?>">
-          <a href="<?= $urlWhatsapp ?><?= $whatsappNumber ?><?= $whatsappMessage ? $whatsappMessage : '' ;?>"
+          <a href="<?= $urlWhatsapp ?><?= $whatsappNumber ?><?= $whatsappMessage ?>"
                rel="noopener"
                aria-label="WhatsApp"
                target="<?= $openNewTab ? '_blank' : '_self';?>">
                <img
                     src="<?php echo $this->getViewFileUrl('Vitormorais_Whatsapp::images/wpp-logo.png'); ?>"
                     alt="WhatsApp"
+                    title="WhatsApp"
+                    loading="lazy"
                >
           </a>
      </div>

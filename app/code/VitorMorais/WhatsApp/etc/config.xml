@@ -15,6 +15,7 @@
                 <message>Olá, estou interessado no seu produto!</message>
                 <position>left</position>
                 <open_new_tab>1</open_new_tab>
+                <url>https://api.whatsapp.com/send?phone=</url>
             </vitormorais_general>
         </vitormorais_whatsapp>
     </default>

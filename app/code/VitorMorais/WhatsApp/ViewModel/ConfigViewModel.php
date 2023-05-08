@@ -53,7 +53,7 @@ class ConfigViewModel implements ArgumentInterface
           }
 
           if (!empty($messageFull)) {
-               $messageTreated = str_replace(" ", "+", $messageFull); // replace spate to +
+               $messageTreated = str_replace(" ", "+", $messageFull);
                return '&text=' . $messageTreated;
           }
      }
@@ -74,26 +74,10 @@ class ConfigViewModel implements ArgumentInterface
           );
      }
 
-     public function getIconColor()
+     public function getWhatsappUrlApi()
      {
           return $this->scopeConfig->getValue(
-              'vitormorais_whatsapp/vitormorais_general/icon_color',
-              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-          );
-     }
-
-     public function getIconBackgroundColor()
-     {
-          return $this->scopeConfig->getValue(
-              'vitormorais_whatsapp/vitormorais_general/icon_background_color',
-              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
-          );
-     }
-
-     public function getWidth()
-     {
-          return $this->scopeConfig->getValue(
-              'vitormorais_whatsapp/vitormorais_general/width',
+              'vitormorais_whatsapp/vitormorais_general/url',
               \Magento\Store\Model\ScopeInterface::SCOPE_STORE
           );
      }
