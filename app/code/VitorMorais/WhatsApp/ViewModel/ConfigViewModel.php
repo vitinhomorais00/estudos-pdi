@@ -9,21 +9,26 @@ namespace VitorMorais\WhatsApp\ViewModel;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
-
+use Magento\Store\Model\StoreManagerInterface;
 
 class ConfigViewModel implements ArgumentInterface
 {
-     /** @var ScopeConfigInterface  */
+     /** @var ScopeConfigInterface */
      private $scopeConfig;
 
+     /** @var StoreManagerInterface */
+     private $storeManager;
+
      /**
-          * @param ScopeConfigInterface $scopeConfig
-          * @param StoreManagerInterface $storeManager
-          */
+     * @param ScopeConfigInterface $scopeConfig
+     * @param StoreManagerInterface $storeManager
+     */
      public function __construct(
-          ScopeConfigInterface $scopeConfig
+          ScopeConfigInterface $scopeConfig,
+          StoreManagerInterface $storeManager
      ) {
           $this->scopeConfig = $scopeConfig;
+          $this->storeManager = $storeManager;
      }
 
      public function isEnabled()
@@ -80,5 +85,26 @@ class ConfigViewModel implements ArgumentInterface
               'vitormorais_whatsapp/vitormorais_general/url',
               \Magento\Store\Model\ScopeInterface::SCOPE_STORE
           );
+     }
+
+     public function getCustomIcon()
+     {
+          $customIcon = $this->scopeConfig->getValue(
+              'vitormorais_whatsapp/vitormorais_general/custom_icon',
+              \Magento\Store\Model\ScopeInterface::SCOPE_STORE
+          );
+
+          if (empty($customIcon)) {
+               return null;
+          }
+
+          return $this->getMediaUrl() . 'custom_icon/' . $customIcon;
+     }
+
+     public function getMediaUrl()
+     {
+          return $this->storeManager
+               ->getStore()
+               ->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
      }
 }

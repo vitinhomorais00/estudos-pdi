@@ -21,14 +21,14 @@
                          <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     </field>
                     <field id="number" translate="label comment" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
-                         <label>WhatsApp Number</label>
+                         <label>Number</label>
                          <comment>Example: 5511999999999</comment>
                          <depends>
                               <field id="enabled">1</field>
                          </depends>
                     </field>
                     <field id="message" translate="label comment" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
-                         <label>WhatsApp Message</label>
+                         <label>Message</label>
                          <comment>This message will be sent automatically to the destination number. Example: Hello, I'm interested in your product!</comment>
                          <depends>
                               <field id="enabled">1</field>
@@ -37,7 +37,7 @@
                     <field id="position" translate="label" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1" type="select">
                          <label>Position</label>
                          <source_model>VitorMorais\WhatsApp\Model\Config\Source\Position</source_model>
-                         <comment>Choose in which position the WhatsApp icon will appear on the website</comment>
+                         <comment>Choose in which position the WhatsApp icon will appear on the website.</comment>
                          <depends>
                               <field id="enabled">1</field>
                          </depends>
@@ -51,10 +51,16 @@
                          </depends>
                     </field>
                     <field id="url" translate="label comment" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1" type="text">
-                         <label>WhatsApp URL API</label>
+                         <label>URL API</label>
                          <depends>
                               <field id="enabled">1</field>
                          </depends>
+                    </field>
+                    <field id="custom_icon" translate="label" type="Magento\Config\Block\System\Config\Form\Field\File" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
+                         <label>Custom icon</label>
+                         <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                         <upload_dir config="system" scope_info="1">custom_icon</upload_dir>
+                         <comment>Allowed extensions: jpg, jpeg, gif and png</comment>
                     </field>
                </group>
           </section>

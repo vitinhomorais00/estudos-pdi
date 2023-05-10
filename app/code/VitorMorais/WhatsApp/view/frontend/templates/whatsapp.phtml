@@ -11,6 +11,8 @@
     $whatsappNumber = $viewModel->getWhatsAppNumber();
     $whatsappMessage = $viewModel->getWhatsappMessage();
     $urlWhatsapp = $viewModel->getWhatsappUrlApi();
+    $pathDefaultIcon = 'Vitormorais_Whatsapp::images/wpp-logo.png';
+    $customIcon = ($viewModel->getCustomIcon()) ?: $this->getViewFileUrl($pathDefaultIcon);
 ?>
 
 <?php if (!empty($whatsappNumber)): ?>
@@ -19,8 +21,7 @@
                rel="noopener"
                aria-label="WhatsApp"
                target="<?= $openNewTab ? '_blank' : '_self';?>">
-               <img
-                    src="<?php echo $this->getViewFileUrl('Vitormorais_Whatsapp::images/wpp-logo.png'); ?>"
+               <img src="<?= $customIcon ?>"
                     alt="WhatsApp"
                     title="WhatsApp"
                     loading="lazy"
