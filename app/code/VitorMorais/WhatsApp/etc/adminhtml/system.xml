@@ -61,6 +61,9 @@
                          <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
                          <upload_dir config="system" scope_info="1">custom_icon</upload_dir>
                          <comment>Allowed extensions: jpg, jpeg, gif and png</comment>
+                         <depends>
+                              <field id="enabled">1</field>
+                         </depends>
                     </field>
                </group>
           </section>
